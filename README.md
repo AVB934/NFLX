@@ -3,8 +3,8 @@ Overview
 
 This repository contains two linear regression models for predicting Netflix’s stock prices using historical data. The models are built using PyTorch and are designed to forecast two different target variables:
 
-	1.	Adjusted Closing Price: The first model predicts Netflix’s adjusted closing price based on historical stock data.
-	2.	Regular Closing Price: The second model forecasts the regular closing price.
+Adjusted Closing Price: The first model predicts Netflix’s adjusted closing price based on historical stock data.
+Regular Closing Price: The second model forecasts the regular closing price.
 
 Both models are implemented with preprocessing, training, and evaluation steps to showcase their performance and accuracy.
 
@@ -12,12 +12,12 @@ Data
 
 The dataset used is NFLX_DATA2023.csv, which includes the following columns:
 
-	•	Open: Opening stock price
-	•	High: Highest stock price of the day
-	•	Low: Lowest stock price of the day
-	•	Volume: Number of shares traded
-	•	Close: Regular closing stock price (for the second model)
-	•	Adj Close: Adjusted closing stock price (for the first model)
+Open: Opening stock price
+High: Highest stock price of the day
+Low: Lowest stock price of the day
+Volume: Number of shares traded
+Close: Regular closing stock price (for the second model)
+Adj Close: Adjusted closing stock price (for the first model)
 
 Preprocessing
 

@@ -23,8 +23,8 @@ Preprocessing
 
 Data normalisation is performed as follows:
 
-	•	Adjusted Closing Price Model: Min-max normalisation using MinMaxScaler.
-	•	Regular Closing Price Model: Min-max normalisation using manual scaling.
+Adjusted Closing Price Model: Min-max normalisation using MinMaxScaler.
+Regular Closing Price Model: Min-max normalisation using manual scaling.
 
 The dataset is split into training and test sets with an 80-20 ratio for both models.
 

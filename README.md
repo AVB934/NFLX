@@ -22,6 +22,7 @@ Preprocessing
 Data normalisation is performed as follows:
 
 Adjusted Closing Price Model: Min-max normalisation using MinMaxScaler.
+
 Regular Closing Price Model: Min-max normalisation using manual scaling.
 
 The dataset is split into training and test sets with an 80-20 ratio for all models.
@@ -72,6 +73,7 @@ Training
 The models are trained using the following optimisation techniques:
 
 Linear Regression Models: Stochastic Gradient Descent (SGD) with a learning rate of 0.01.
+
 LSTM Model: Adam optimiser.
 
 The training process involves monitoring loss reduction over epochs to ensure model learning and performance improvement.
@@ -81,7 +83,9 @@ Evaluation
 The performance of each model is evaluated using the following metrics:
 
 Mean Squared Error (MSE)
+
 Mean Absolute Error (MAE)
+
 R-squared Value
 
 These metrics assess model accuracy and predictive capability.

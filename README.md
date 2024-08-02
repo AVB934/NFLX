@@ -6,10 +6,15 @@ Data
 The dataset used is NFLX_DATA2023.csv, which includes the following columns:
 
 Open: Opening stock price
+
 High: Highest stock price of the day
+
 Low: Lowest stock price of the day
+
 Volume: Number of shares traded
+
 Close: Regular closing stock price (for the second model)
+
 Adj Close: Adjusted closing stock price (for the first and third models)
 
 Preprocessing

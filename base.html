@@ -1,0 +1,44 @@
+<!-- templates base.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>{% block title %}NTFLX Stock Closing Price Predictor{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}" class="logo">Closing Price Predictor</a></h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'predict' %}">Predict</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NTFLX Stock Closing Price Predictor. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,205 @@
+/* General Reset */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sets font for the entire page */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: white; /* White background for the entire page */
+    color: black; /* Black text color for the entire page */
+}
+
+/* Header Styling */
+header {
+    background-color: #f8f6f7; /* Very light red background color for the header */
+    color: rgb(239, 102, 102); /* Text color in the header */
+    padding: 1em 0; /* Padding around the header content */
+    text-align: center; /* Centers the header content */
+    position: relative; /* Positioning for layering */
+    z-index: 1; /* Ensures header is above other content */
+}
+
+header h1 {
+    margin: 0; /* Removes default margin around the header title */
+    text-align: center; /* Centers the header title text */
+}
+
+header a.logo {
+    color: rgb(239, 102, 102); /* Color of the header link */
+    text-decoration: none; /* Removes underline from the header link */
+    font-size: 1.5rem; /* Larger font size for the logo */
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #f7f4f4; /* Very light red background color for the navigation */
+    padding: 0.5em 0; /* Padding around the navigation content */
+}
+
+nav ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0; /* Removes padding from the list */
+    margin: 0; /* Removes margin from the list */
+}
+
+nav ul li {
+    display: inline; /* Displays list items in a horizontal line */
+    margin-right: 15px; /* Space between navigation items */
+}
+
+nav ul li a {
+    color: rgb(239, 102, 102); /* Color of the navigation links */
+    text-decoration: none; /* Removes underline from navigation links */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px; /* Padding around the main content area */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f8f6f7; /* Light background color for the footer (same as header) */
+    color: rgb(239, 102, 102); /* Text color in the footer */
+    padding: 1em 0; /* Padding around the footer content */
+    text-align: center; /* Center align text */
+}
+
+footer p {
+    margin: 0; /* Removes default margin around the footer text */
+}
+
+/* Container in Footer */
+footer .container {
+    max-width: 1200px; /* Maximum width for the footer container */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Padding inside the container */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f4f4f4; /* Light gray background color for the hero section */
+    padding: 2rem; /* Padding inside the hero section */
+    text-align: center; /* Center align text */
+    border-radius: 10px; /* Rounded corners for the hero section */
+    margin: 20px auto; /* Center the hero section horizontally and add margin */
+    max-width: 800px; /* Max width for the hero section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.hero h2 {
+    margin-bottom: 1rem; /* Space below the heading */
+    font-size: 2rem; /* Font size for the heading */
+    color: black; /* Black color for the heading text */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Font size for the paragraph text */
+    color: black; /* Black color for the paragraph text */
+    margin-bottom: 1.5rem; /* Space below the paragraph */
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block; /* Inline-block for the button */
+    background-color: #0044cc; /* Background color of call-to-action button */
+    color: white; /* Text color on button */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 30px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    font-size: 16px; /* Font size for button text */
+    font-weight: bold; /* Bold font weight for emphasis */
+}
+
+.cta-button:hover {
+    background-color: #0044cc; /* Darker background color on hover */
+}
+
+/* Prediction Container */
+.prediction-container {
+    max-width: 800px; /* Max width for the container */
+    margin: 20px auto; /* Center the container horizontally and add margin */
+    padding: 20px; /* Padding inside the container */
+    background-color: #f9f9f9; /* Light gray background for the container */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Form Styling */
+.prediction-form {
+    display: flex; /* Flexbox layout for the form */
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.form-group {
+    margin-bottom: 1rem; /* Space between form elements */
+}
+
+.form-group label {
+    display: block; /* Block display for labels */
+    margin-bottom: 0.5rem; /* Space between label and input */
+    font-weight: bold; /* Bold font for labels */
+}
+
+.form-group input[type="number"],
+.form-group input[type="date"] {
+    padding: 8px; /* Padding inside input fields */
+    width: 100%; /* Full width for input fields */
+    height: 40px; /* Height for consistency */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #ccc; /* Light border for visibility */
+    box-sizing: border-box; /* Includes padding in the total width */
+    font-size: 14px; /* Font size for consistency */
+}
+
+.date-group small {
+    display: block; /* Block display for additional info */
+    margin-top: 0.5rem; /* Space above the additional info */
+    font-size: 0.9rem; /* Smaller font size for additional info */
+    color: #555; /* Dark gray color for additional info text */
+}
+
+.submit-button {
+    background-color: #0044cc; /* Background color of submit button */
+    color: white; /* Text color on button */
+    border: none; /* No border for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 30px; /* Rounded corners for the button */
+    font-size: 16px; /* Font size for button text */
+    font-weight: bold; /* Bold font weight for emphasis */
+    margin-top: 10px; /* Space above the button */
+}
+
+.submit-button:hover {
+    background-color: #0033aa; /* Darker background color on hover */
+}
+
+/* Result and Error Messages */
+.result, .error {
+    max-width: 600px; /* Limit the width of result and error boxes */
+    margin: 20px auto; /* Center horizontally and add margin */
+    padding: 15px; /* Padding inside the boxes */
+    border-radius: 8px; /* Rounded corners */
+    text-align: center; /* Center the text inside the boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted effect */
+}
+
+.result {
+    background-color: #d4edda; /* Light green background for results */
+    color: #155724; /* Dark green text color */
+    border: 1px solid #c3e6cb; /* Slightly darker green border */
+}
+
+.error {
+    background-color: #f8d7da; /* Light red background for errors */
+    color: #721c24; /* Dark red text color */
+    border: 1px solid #f5c6cb; /* Slightly darker red border */
+}
+
+.prediction-value {
+    font-size: 1.5rem; /* Larger font size for the prediction value */
+    font-weight: bold; /* Bold font for emphasis */
+}

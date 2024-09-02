@@ -1,0 +1,12 @@
+<!-- templates home.html -->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <h2>Welcome to the NTFLX Stock Closing Price Prediction App</h2>
+        <p>Utilize advanced algorithms to forecast the stock closing price of Netflix.</p>
+        <a href="{% url 'predict' %}" class="cta-button">Get Started</a>
+    </section>
+{% endblock %}

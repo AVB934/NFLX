@@ -1,0 +1,45 @@
+<!-- templates predict.html -->
+{% extends 'base.html' %}
+
+{% block title %}NFLX Stock Closing Price Prediction{% endblock %}
+
+{% block content %}
+    <section class="prediction-container">
+        <h2>NFLX Stock Closing Price Prediction</h2>
+
+        <form class="prediction-form" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="open">Open (in USD):</label>
+                <input type="number" step="0.0000001" name="open" id="open" placeholder="Enter open price" required>
+            </div>
+            <div class="form-group">
+                <label for="high">High (in USD):</label>
+                <input type="number" step="0.0000001" name="high" id="high" placeholder="Enter high price" required>
+            </div>
+            <div class="form-group">
+                <label for="low">Low (in USD):</label>
+                <input type="number" step="0.0000001" name="low" id="low" placeholder="Enter low price" required>
+            </div>
+            <div class="form-group date-group">
+                <label for="date">Date (optional):</label>
+                <input type="date" name="date" id="date">
+                <small>Enter the date for which these values are relevant (optional).</small>
+            </div>
+            <button type="submit" class="submit-button">Predict</button>
+        </form>
+
+        {% if prediction is not None %}
+            <div class="result">
+                <h3>Predicted Closing Price{{ date_range }}</h3>
+                <p class="prediction-value">${{ prediction }}</p>
+            </div>
+        {% endif %}
+
+        {% if error_message %}
+            <div class="error">
+                <p>{{ error_message }}</p>
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}. 

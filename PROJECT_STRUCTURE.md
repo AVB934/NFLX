@@ -27,16 +27,12 @@ NFLX/
 │   ├── views.py                    # View functions
 │   └── prediction.py               # ML model prediction logic
 │
-├── ml_models/                      # Machine learning models and notebooks
-│   ├── README.md                   # ML models documentation
-│   ├── nflx_model.pth              # Pre-trained PyTorch model
-│   ├── NFLX.ipynb                  # Notebook 1
-│   ├── NFLX_ClosingPrice_Pred.ipynb    # Notebook 2
-│   ├── NFLX_ADJClosingPrice_Pred.ipynb # Notebook 3
-│   └── NFLX_LSTM.ipynb             # LSTM model notebook
+├── ml_models/                      # Deployed machine learning model
+│   ├── README.md                   # Model documentation
+│   └── nflx_model.pth              # Pre-trained PyTorch linear model
 │
 ├── manage.py                       # Django management utility
-├── db.sqlite3                      # SQLite database
+├── db.sqlite3                      # Local database created by migrate (ignored)
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # Project README
 ├── .gitignore                      # Git ignore file

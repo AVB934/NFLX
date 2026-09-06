@@ -1,27 +1,16 @@
-# ML Models & Jupyter Notebooks
+# Deployed Model
 
-This folder contains:
+This directory contains the model used by the Django application:
 
-1. **nflx_model.pth** - Pre-trained PyTorch linear regression model for NFLX stock price prediction
-2. **Jupyter Notebooks** - Training notebooks for the various models:
-   - NFLX.ipynb
-   - NFLX_ClosingPrice_Pred.ipynb
-   - NFLX_ADJClosingPrice_Pred.ipynb
-   - NFLX_LSTM.ipynb
+- `nflx_model.pth`: PyTorch state dictionary for a linear regression model.
 
-## Model Information
+The model architecture is defined in `NFLXapp/prediction.py` as `nn.Linear(3, 1)`.
+It accepts three normalized features:
 
-The currently deployed model (`nflx_model.pth`) is a linear regression model trained on historical NFLX data with 3 input features:
-- Open price
-- High price
-- Low price
+1. Open price
+2. High price
+3. Low price
 
-**Output:** Predicted closing price (normalized between 0-1)
+It returns one normalized closing-price prediction. The application then denormalizes that value using the historical NFLX Close range downloaded from Yahoo Finance.
 
-## To Retrain the Model
-
-Run any of the Jupyter notebooks to retrain and save a new model. The notebook will:
-1. Download historical data
-2. Preprocess and normalize the data
-3. Train the model
-4. Save the trained model as `nflx_model.pth`
+Training notebooks are not included because they are not required to run the web application. To replace the model, create compatible weights with the same three-input, one-output architecture and update `nflx_model.pth`.

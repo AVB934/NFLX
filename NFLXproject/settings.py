@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-@ukuann8^tp=ujlr42_4v*1t%us3=qz$=2xfc4b&b%tp!t#zq5"
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-@ukuann8^tp=ujlr42_4v*1t%us3=qz$=2xfc4b&b%tp!t#zq5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,7 +42,7 @@ ROOT_URLCONF = "NFLXproject.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates'], 
+        "DIRS": [BASE_DIR / 'NFLXapp' / 'templates'], 
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -99,9 +99,8 @@ USE_TZ = True  # Use timezone-aware datetimes
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
-#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'NFLXapp', 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

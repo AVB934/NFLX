@@ -15,11 +15,24 @@ def predict_view(request):
     if request.method == 'POST':  # Check if the request is a POST (form submission)
         try:
             # Extract features from the POST request (form input)
-            features = [
-                float(request.POST['open']),  # Convert 'open' input to float
-                float(request.POST['high']),  # Convert 'high' input to float
-                float(request.POST['low']),   # Convert 'low' input to float
-            ]
+            open_price = float(request.POST['open'])
+            high_price = float(request.POST['high'])
+            low_price = float(request.POST['low'])
+            
+            # Validate input values
+            if open_price <= 0 or high_price <= 0 or low_price <= 0:
+                error_message = "All prices must be positive values."
+                return render(request, 'predict.html', {'error_message': error_message})
+            
+            if high_price < open_price or open_price < low_price:
+                error_message = "Invalid price relationship: High must be >= Open, and Open must be >= Low."
+                return render(request, 'predict.html', {'error_message': error_message})
+            
+            if open_price > 10000 or high_price > 10000 or low_price > 10000:
+                error_message = "Price values seem unreasonably high. Please check your inputs."
+                return render(request, 'predict.html', {'error_message': error_message})
+            
+            features = [open_price, high_price, low_price]
 
             # Extract optional date input
             date_str = request.POST.get('date', None)

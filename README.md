@@ -87,7 +87,6 @@ NFLX/
 │   └── urls.py             # Root routes
 ├── ml_models/
 │   ├── nflx_model.pth      # Deployed model weights
-│   └── README.md           # Model notes
 ├── manage.py               # Django command-line entry point
 ├── requirements.txt        # Python dependencies
 └── GETTING_STARTED.md      # Extended setup guide
